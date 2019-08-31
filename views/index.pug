@@ -24,12 +24,11 @@ block content
         td= book.genre
         td= book.year
   span.pagination
-    - var i = [];
+    - let i = [];
       each book in bookCount 
        - i.push(book.id);
-    - var pages = Math.ceil(i.length/10);
-    - console.log(pages);
-    - var page = 0;
+    - let pages = Math.ceil(i.length/10);
+    - let page = 0;
       while page < pages
         a.button(href='/books/page/' + ( page ))=  page
         - page++
